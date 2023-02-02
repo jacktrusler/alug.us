@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>ALUG Vim</title>
+
+  <script type="module">
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="vim.css">
+
+  <!-- general meta -->
+  <meta name="keywords" content="ed vi vim neovim">
+  <meta name="description" content="A presentation on Vim, everyone's favorite text editor :>">
+  <meta name="theme-color" content="#282828">
+  <!-- OpenGraph meta -->
+  <meta property="og:title" content="ALUG Vim">
+  <meta property="og:description" content="A presentation on Vim, everyone's favorite text editor :>">
+  <meta property="og:image" content="../../images/vim/Vim.svg">
+  <meta property="og:image:alt" content="Vim">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="alug.us">
+  <meta name="twitter:card" content="Vim">
+  <link rel="canonical" href="https://alug.us/pages/vim/vim.html">
+
+  <link rel="icon" href="../../images/vim/Vim.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../images/vim/Vim.svg">
+</head>
+
+<body>
+  <!-- Content -->
+  <main>
+    <div class="page-container">
+      <div class="header">
+        <hr>
+        <div class="title-box">
+          <h1 class="title">Vi... IMproved!</h1>
+          <button id="theme-toggle" class="" type="button">
+            <svg id="sun" class="sun" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-sun">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg id="moon" class="moon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-moon">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+        <span class="subtitle">A dive into the <b>best</b> text editor</span>
+        <span class="sub-sub">*surely this true statement won't cause any debate</span>
+        <hr>
+        <div class="vim-landing pic-border">
+          <img src="../../images/vim/vim_landing.png" />
+        </div>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">Humble Beginnings... <b>Ed</b></h2>
+        <h3 class="section-subtitle">A simple text editor.</h3>
+        <hr>
+        <div class="logo-pic-container">
+          <img class="logo-pic pic-border" src="../../images/vim/EDitor.jpg" />
+        </div>
+        <p class="section-desc">
+          Surprisingly (to me at least), the history of Vim starts here. Ed is the first text editor in our story, it
+          was developed by Ken Thompson in August 1969. It was influenced by qed text editor, which was developed at UC
+          Berkeley, Ken's alma mater. Thompson implemented regular expressions on qed, which was notable. Ed is a line
+          based text editor with no GUI, just simple command line options. Start ed with a prompt:
+          <span class="code">ed -p ">> "</span>
+          This will start ed and add an indicator to see your cursor position. There are two modes,
+          command mode, which will have your defined cursor, and input mode, which means you're actually inputing
+          into the program, the ">> " will disappear in input mode.
+
+          "," in front of commands will apply to the whole file.
+          <span class="code">>>,n</span>
+          Will print the whole file with line numbers for example.
+        </p>
+        <table>
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+          </tr>
+
+          <tr>
+            <td>[.]</td>
+            <td>places cursor at line number "." meaning any number)</td>
+          </tr>
+          <tr>
+            <td>[.,.]a</td>
+            <td>append to next line (default: last line of file)</td>
+          </tr>
+          <tr>
+            <td>[.,.]d</td>
+            <td>delete line(s) (default: last line of file)</td>
+          </tr>
+          <tr>
+            <td>[.,.]m[.]</td>
+            <td>move line(s) from [range]m[new location]</td>
+          </tr>
+          <tr>
+            <td>[.,.]p</td>
+            <td>print range, current address is set to last line printed</td>
+          </tr>
+          <tr>
+            <td>[.,.]n</td>
+            <td>print all with line numbers, current address is set to last line printed</td>
+          </tr>
+          <tr>
+            <td>r [filename]</td>
+            <td>reads the file, and outputs the number of bytes</td>
+          </tr>
+          <tr>
+            <td>wq [filename]</td>
+            <td>writes the file, outputs the number of bytes, then quits</td>
+          </tr>
+          <tr>
+            <td>g/re/p</td>
+            <td><b>g</b>lobally find lines by <b>re</b>gular expression and <b>p</b>rint. (Also try g/re/n)</td>
+          </tr>
+          <tr>
+            <td>,s/old/new/g</td>
+            <td>replace all occurances of [old] with [new]</td>
+          </tr>
+        </table>
+
+        <p>
+          <a class="section-desc" href=https://www.computerhope.com/unix/ued.htm>Here is a comprehensive list of Ed
+            commands</a><span class="section-desc"> if for some
+            crazy reason you want to become an Ed legend.</span>
+        </p>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">Change of pace... <b>Vi</b></h2>
+        <h3 class="section-subtitle">A text editor, with a GUI??</h3>
+        <hr>
+        <div class="logo-pic-container">
+          <img class="logo-pic pic-border" src="../../images/vim/Vi.jpg" />
+        </div>
+        <p class="section-desc">
+          The text editor that caused us to start down this twisted (righteous?) path was called Vi, written by Bill
+          Joy
+          in 1976. This was the <b>Vi(sual)</b> mode for a line editor called <b>Ex</b>, and was released as part of
+          the
+          first Berkely Software Distribution (BSD) / Unix release in March 1978. Ex in the form shipped with Vi was
+          also written by Bill Joy, but had some features influenced from Charles Haley, who modified <b>Ed</b>
+          calling
+          it <b>Em</b>.
+          <a href="http://roguelife.org/~fujita/COOKIES/HISTORY/1BSD/exrefm.pdf" target="_blank"
+            class="footnote">[1]</a>
+        </p>
+
+        <blockquote cite="https://www.computerhope.com/unix/uex.htm">&emsp;"<b class="flex-inline">
+            Ex</b> stands for extended, because it was originally an extension of the simple line editor <b
+            class="flex-inline">Ed</b>. Similarly, "Vi" stands for Visual, because Vi is the "Visual" (full-screen)
+          editing mode, which was eventually added to ex.
+          <p style="margin-bottom: 0">
+            &emsp;The commands Ex and Vi point to the same program, started in different modes. You can start ex by
+            running <span class="code-span">vi -e</span>, or you can start Vi by running <span class="code-span">ex
+              -v</span>. Additionally, from within Ex, you can start Vi with the <span class="code-span">visual</span>
+            command (or <span class="code-span">vi</span> for short). From inside Vi, you can start Ex with the
+            command
+            <span class="code-span">Q</span>."
+          </p>
+          <a href="https://www.computerhope.com/unix/uex.htm" target="_blank" class="quote">
+            -- computerhope.com
+          </a>
+        </blockquote>
+
+        <p class="section-desc">
+          On top of adding a GUI, Vi introduced a whole new slew of ideas and commands to the text editing
+          experience.
+          Some of these
+          came from ex, and some were for Vi itself. Also instead of editing out whole lines, you can now edit
+          indivudial characters
+          in the lines. There are 3 modes in Vi:
+        </p>
+        <ul class="list">
+          <li>Command mode</li>
+          <li>Insert mode</li>
+          <li>Last Line mode</li>
+        </ul>
+        <p class="section-desc">
+          Command mode is the mode you are in when you enter Vi, it allows you to use motions and movement commands
+          <b>(hjkl)</b> to move around the page.
+          Entering insert mode requires an input command in Command mode, commonly these are <b>i</b> (insert),
+          <b>a</b>
+          (append), <b>c</b> (change), <b>s</b> (substitute), <b>o</b> (open new line).
+          Entering last line mode requires typing colon <b>":"</b> this allows you to use <b>Ex</b> commands.
+        </p>
+
+        <div class="box">
+          <div class="dirs-box">
+            <span class="dirs-title">Vi Movement</span>
+            <div class="dirs">
+              <div>k</div>
+              <div class="h-l">
+                <span>h</span>
+                <span>l</span>
+              </div>
+              <div>j</div>
+            </div>
+          </div>
+
+
+          <div class="dirs-box">
+            <span class="dirs-title">Insert Mode</span>
+            <div class="dirs">
+              <div class="insert">
+                <span>i</span>
+                <span>a</span>
+                <span>c</span>
+                <span>s</span>
+                <span>o</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dirs-box">
+            <span class="dirs-title">Last Line Mode</span>
+            <div class="dirs">
+              <div class="insert">
+                <span>:</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="section-desc">
+          Now for a timeless meme in the Vim community. Hopefully I can save one more poor soul from an almost
+          certain
+          fate.
+        </p>
+        <div class="logo-pic-container">
+          <img class="exiting-pic pic-border" src="../../images/vim/exiting_vim.jpg" />
+        </div>
+
+        <p class="section-desc">
+          <span class="code"> :q! </span>
+          Quits Vi, the ! makes it so it quits even if you didn't write the file. The : puts you in Last Line mode.
+          <span class="code"> :wq </span>
+          Writes the file and quits.
+          <span class="code"> :x </span>
+          <span class="code"> ZZ </span>
+          :x and ZZ are shorthand for :wq --- ZZ is performed in Command mode.
+        </p>
+
+        <table>
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+          </tr>
+
+          <tr>
+            <td>[.]G</td>
+            <td>places cursor at line number "." meaning any number)</td>
+          </tr>
+          <tr>
+            <td>dd</td>
+            <td>delete whole line</td>
+          </tr>
+          <tr>
+            <td>yy</td>
+            <td>yank whole line</td>
+          </tr>
+          <tr>
+            <td>p</td>
+            <td>paste</td>
+          </tr>
+          <tr>
+            <td>ctrl-d &nbsp; ctrl-u</td>
+            <td>scroll downup half a screen</td>
+          </tr>
+          <tr>
+            <td>ctrl-f &nbsp; ctrl-b</td>
+            <td>page forward/backward a full screen</td>
+          </tr>
+          <tr>
+            <td>f[char]</td>
+            <td>finds [char] in current line. ";" to repeat "," to go back.</td>
+          </tr>
+          <tr>
+            <td>u</td>
+            <td>undo, twice to redo</td>
+          </tr>
+          <tr>
+            <td>J</td>
+            <td>join lines</td>
+          </tr>
+          <tr>
+            <td>}{</td>
+            <td>jump paragraphs</td>
+          </tr>
+          <tr>
+            <td>/ or ?</td>
+            <td>search forward or backward</td>
+          </tr>
+          <tr>
+            <td>:%s/old/new/g</td>
+            <td>replace all occurances of [old] with [new]</td>
+          </tr>
+        </table>
+
+        <p>
+          <a class="section-desc" href="https://www.atmos.albany.edu/daes/atmclasses/atm350/vi_cheat_sheet.pdf">Here
+            is
+            a large list of Vi commands</a><span class="section-desc"> to help you on your Vi journey.</span>
+        </p>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">Here comes Big Bram... <b>Vim</b></h2>
+        <h3 class="section-subtitle">We ain't editing in Kansas anymore.</h3>
+        <hr>
+        <div class="logo-pic-container">
+          <img class="logo-pic" src="../../images/vim/Vim.svg" />
+        </div>
+        <p class="section-desc">
+          <b>V</b>i <b>IM</b>proved was influenced from Stevie (<b>ST</b> <b>E</b>ditor for <b>VI</b>
+          <b>E</b>nthusiasts) written by Tim Thompson but I couldn't find much in terms of the history of Stevie except
+          for changing undo functionality. It seems that a vast majority of what makes Vim, Vim is Bram Moolenaar. This
+          is the wikipedia summary on Bram:
+        </p>
+
+        <blockquote cite="https://en.wikipedia.org/wiki/Bram_Moolenaar">&emsp;
+          "Bram Moolenaar is a Dutch computer programmer and an active member of the open-source software community. He
+          is the original author, maintainer, release manager, and benevolent dictator for life of Vim a vi-derivative
+          text editor that is very popular among programmers and power users. From July 2006 until September 2021
+          Moolenaar was employed by Google working in the Zürich office. He was able to spend part of his time
+          maintaining Vim."
+          <a href="https://en.wikipedia.org/wiki/Bram_Moolenaar" target="_blank" class="quote">
+            -- wikipedia.org
+          </a>
+        </blockquote>
+
+        <p class="section-desc">
+          Vim was released in 1991, 15 years after Vi and is massively different from Vi, it has a much larger (like
+          seriously there's so many new features) depth of new functionality, so much that i'm going to miss probably
+          90% of it, but here are some of the major differences:
+        </p>
+
+        <table class="gruv-green">
+          <tr>
+            <td>Interface</td>
+            <td>buffers / windows / tabs </td>
+          </tr>
+          <tr>
+            <td>Modes</td>
+            <td>normal / insert / visual / terminal / command / replace</td>
+          </tr>
+          <tr>
+            <td>Colors</td>
+            <td>syntax highlighting / themes</td>
+          </tr>
+          <tr>
+            <td>Functionality</td>
+            <td>jump list / registers / undo history / code folding</td>
+          </tr>
+          <tr>
+            <td>Motions</td>
+            <td>new combinations introduced to move around the page and edit text</td>
+          </tr>
+          <tr>
+            <td>Keymaps</td>
+            <td>customizable ways to automate your vim experience</td>
+          </tr>
+          <tr>
+            <td>Plugins</td>
+            <td>the true next level of Vim written by users</td>
+          </tr>
+        </table>
+
+        <p class="section-desc">
+          While many of these changes are built in, other changes are made possible by the introduction of vimscript,
+          which is a built in scripting language written by Bram enabling you to run Ex and Vim commands automatically
+          when Vim starts up, or execute functions during runtime. The place to usually start with vimscript is in
+          the .vimrc file. <span id="vimrc" onclick="downloadVimrc()">Click to download an example .vimrc.</span> The
+          vimrc file should be named <span class="code-span">.vimrc</span> and placed in the <span
+            class="code-span">$HOME</span> directory.
+        </p>
+
+        <span class="code">:source</span>
+        <p class="section-desc">
+          Sources the file, which means it reads the Ex commands from the current buffer, optionally you can add a
+          filename to source a different file, adding % says to source current file. <span class="code-span">:so</span>
+          is the shortcut.
+        </p>
+
+        <table>
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+          </tr>
+
+          <tr>
+            <td>di[w t p ) } " ' `]</td>
+            <td>delete in, can delete in w(ord), t(ag), p(aragrphs), )}(blocks), or "`'(quotes)</td>
+          </tr>
+          <tr>
+            <td>V</td>
+            <td>visually select whole line, enters Visual Line mode. Continue selecting with movement</td>
+          </tr>
+          <tr>
+            <td>"[register]y</td>
+            <td>yank selection to register [0-9][a-z]</td>
+          </tr>
+          <tr>
+            <td>"[register]p</td>
+            <td>paste from register [0-9][a-z]</td>
+          </tr>
+          <tr>
+            <td>u &nbsp Crtl-r</td>
+            <td>undo / redo, traverses the undo tree</td>
+          </tr>
+          <tr>
+            <td>R</td>
+            <td>Enter replace mode, type to continuously replace</td>
+          </tr>
+          <tr>
+            <td>:![shell command]</td>
+            <td>run shell commands in vim</td>
+          </tr>
+          <tr>
+            <td>Ctrl + o &nbsp Ctrl + i</td>
+            <td>jump backward/forward in jump list</td>
+          </tr>
+          <tr>
+            <td>:term</td>
+            <td>opens a terminal window in terminal mode</td>
+          </tr>
+          <tr>
+            <td>m[char] &nbsp '[char]</td>
+            <td>mark a location in the file using m / jump to mark location using ' (doesn't affect jump list)</td>
+          </tr>
+          <tr>
+            <td>q[char] &nbsp @[char]</td>
+            <td>Record a macro using q, use the macro using @</td>
+          </tr>
+          <tr>
+            <td>:h [keyword]</td>
+            <td>search for keyword in all the vim docs</td>
+          </tr>
+        </table>
+
+        <p class="section-desc">
+          There is an almost endless sea of vim motions and commands, for brevity I added some that show some of the
+          powerful features of Vim, and that I use often. For a more extensive list here's a <a class="section-desc"
+            href="https://vim.rtorr.com/">cheat sheet of Vim commands.</a> I wouldn't recommend trying to
+          memorize these, just something to give you a reference point and maybe some new ideas of
+          motions or commands to try.
+        </p>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">A community approaches... <b>NeoVim</b></h2>
+        <h3 class="section-subtitle">To Vimfinity, and beyond!</h3>
+        <hr>
+        <div class="logo-pic-container">
+          <img class="neovim-pic" src="../../images/vim/Neovim.svg" />
+        </div>
+        <p class="section-desc">
+          Neovim was created as a community fork for Vim with the goals of making a faster, more collaborative
+          and more user friendly and configurable Vim. It can basically be downloaded and run on any operating
+          system and has hundreds of open source projects currently in the ecosystem.
+
+          Here's the about on Github:
+        </p>
+        <blockquote>
+          Vim-fork focused on extensibility and usability
+        </blockquote>
+
+        <p class="section-desc">
+          And here's the first paragraph of the README:
+        </p>
+
+        <blockquote>
+          Neovim is a project that seeks to aggressively refactor Vim in order to:
+          <ul>
+            <li>Simplify maintenance and encourage contributions</li>
+            <li>Split the work between multiple developers</li>
+            <li>Enable advanced UIs without modifications to the core</li>
+            <li>Maximize extensibility</li>
+          </ul>
+          <a href="https://www.github.com/neovim/neovim" target="_blank" class="quote">
+            -- Neovim
+          </a>
+        </blockquote>
+
+        <p class="section-desc">
+          I think Neovim does a great job on delivering on all of these goals, and a large part of the reason
+          is because of their decision to use Lua.
+        </p>
+
+        <span class="small-sub">What is Lua?</span>
+        <p class="section-desc">
+          Lua is a language created in Brazil in 1993.
+          The Lua language was incorporated into Neovim for 5 main reasons.
+        </p>
+        <table class="gruv-green">
+          <tr>
+            <td>Simplicity</td>
+            <td>reference manual is only 100 pages, and covers the entire language, standard lib, and C api</td>
+          </tr>
+          <tr>
+            <td>Small size</td>
+            <td>200kb binary size for Linux</td>
+          </tr>
+          <tr>
+            <td>Portability</td>
+            <td>Lua is implemented in ISO C, which can be used basically anywhere</td>
+          </tr>
+          <tr>
+            <td>Embeddability</td>
+            <td>Lua functions can be used inside of vimscript</td>
+          </tr>
+          <tr>
+            <td>Speed</td>
+            <td>LuaJIT performs comparibly with C, does especially well with table lookups (which are common)</td>
+          </tr>
+        </table>
+        <a href="https://www.youtube.com/watch?v=IP3J56sKtn0" target="_blank" class="">
+          (Most of the notes are from this video)
+        </a>
+        <p class="section-desc">
+          For a text editor, these goals seem like an obvious win. Simplicity is really also key because it
+          allows developers to quickly get up and running with a relatively popular and simple language instead
+          of having to learn vimscript which only really has one use, which is to extend vim.
+        </p>
+
+        <span class="small-sub">LSP Support</span>
+        <p class="section-desc">
+          What is Language Server Protocol (LSP)? Joint project between Microsoft, Redhat and CodeEnv. Bascially LSP is
+          a protocol for how clients should format requests to a language server. This removes the need for editors to
+          implement their own language servers for every language, and instead separate concerns by having all languages
+          implement certain actions as defined by the LSPs. Any editor with an LSP <i>client</i> can interact with any
+          language that provides an LSP <i>server</i>.
+          <br>
+          <br>
+          LSP removes the need for a concept implemented in Vim called tags. A program like ctags is used to create an
+          index file that maps language objects, and allows these objects to be found quickly and efficiently. In LSP
+          the client makes JSON remote procedure calls (RPC) with a defined procedure like goToDefinition, then the
+          server sends back a response, which the client interprets and executes. If done correctly it jumps to the
+          definition of the call. The language servers can provide a lot more functionality most coders have come to
+          expect out of their IDE. Including autocomplete, hover definition, type declaration, implementation, auto
+          formatting, variable renaming, diagnostics and more. All these things are not currently possible in Vim
+          without a plugin, but full featured LSP client plugins do exist for Vim/Nvim...
+          <br>
+          <br>
+          Why have a built in LSP client if plugins already exist? Having an LSP client built in is beneficial because
+          it allows not only for the community to easily configure and build plugins in a way that takes advantage of
+          LSP, but also makes a larger Lua library with more functionality that can be used for plugins that may not be
+          related to LSP.
+        </p>
+        <a href="https://www.youtube.com/watch?v=IP3J56sKtn0" target="_blank" class="">
+          Here's an excellent presentation on what the Language Server Protocol is and does.
+        </a>
+        <a href="https://langserver.org/" target="_blank" class="">
+          Here's a list of language servers, editors and their functionality.
+        </a>
+        <br>
+        <span class="small-sub">Conclusion</span>
+        <p class="section-desc">
+          Finding out the history of Vim was a lot of fun, hopefully this website can provide a good starting point to
+          the endless (no, really) journey that is discovering Vim...
+        </p>
+        <p class="section-desc">
+          Thanks for reading! Now go out and get your Vim on, however you see fit.
+        </p>
+      </div>
+
+    </div>
+  </main>
+  <div class="footer">
+    ALUG 2023
+  </div>
+  <!-- Javascript -->
+  <script src="vim.js"></script>
+</body>
+
+</html>

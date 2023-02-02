@@ -1,0 +1,284 @@
+
+/* ----------------- */
+/* Page Styles Start */
+/* ----------------- */
+
+body {
+  --variable: 1 1 auto;
+}
+
+:root {
+    --background-color: #aaa;
+    --text-color: #121416d8;
+}
+
+html {
+  font-family: "montserrat", sans-serif;
+}
+
+html[data-theme='light'] {
+    --bg: #f9f5d7;
+    --bg1: #ebdbb2;
+    --bg2: #d5c4a1;
+    --fg: #3c3836;
+    --red: #9d0006;
+    --green: #79740e;
+    --yellow: #B57614;
+    --blue: #076678;
+    --purple: #8f3f71;
+    --aqua: #427b58;
+    --orange: #af3a03;
+    --gray: #7c6f64;
+}
+
+html[data-theme='dark'] {
+    --bg: #282828;
+    --bg1: #3c3836;
+    --bg2: #504945;
+    --fg: #fbf1c7;
+    --red: #fb4934;
+    --green: #b8bb26;
+    --yellow: #fabd2f;
+    --blue: #83a598;
+    --purple: #d3869b;
+    --aqua: #8ec07c;
+    --orange: #fe8019;
+    --gray: #a89984;
+}
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+}
+
+hr {
+  margin-left: 0;
+  width: 100%;
+  max-width: 1000px;
+  border: 1.5px solid var(--fg);
+}
+	
+a {
+    color: var(--blue);
+}
+
+a:hover {
+    text-decoration: underline;
+    filter: brightness(80%);
+}
+
+ td, th {
+  border: 3px ridge var(--bg2);
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--bg1);
+}
+
+tr:hover {
+  background-color: var(--bg2);
+}
+
+blockquote {
+  display: flex;
+  flex-flow: column wrap;
+  font-style: italic;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.1rem;
+}
+
+.flex-inline {
+  display: contents;
+}
+
+.quote {
+  align-self: flex-end;
+}
+
+.footnote {
+  color: var(--blue);
+  font-size: 0.5rem;
+  text-decoration: none;
+}
+
+.code-span {
+  background: var(--bg1);
+  padding-left: 4px;
+  padding-right: 4px;
+  color: var(--yellow);
+}
+
+.code {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  white-space: pre;
+  word-wrap: normal;
+  display: block;
+  border: 4px ridge var(--bg2);
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  font-size: 1.1rem;
+  background-color: var(--bg1);
+}
+
+.page-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.header {
+  display: flex;
+  flex: var(--variable);
+  flex-direction: column;
+}
+
+.title-box {
+  display: flex;
+  gap: 16px;
+}
+
+.title {
+  color: #019833;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.subtitle{
+  color: var(--orange);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.sub-sub {
+  color: var(--gray);
+  font-style: italic;
+}
+
+#theme-toggle {
+  background: var(--fg);
+  border: 3px outset var(--gray);
+  width: 48px;
+  height: 48px;
+  margin-top: 4px;
+  padding-top: 4px;
+  border-radius: 50%;
+}
+.sun {
+  color: var(--bg);
+}
+.moon {
+  color: var(--bg);
+}
+.hidden {
+  display: none;
+}
+
+.pic-border {
+  border: 5px ridge var(--bg1);
+}
+
+.vim-landing {
+  max-width: 1000px;
+  height: auto;
+}
+
+.logo-pic-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.logo-pic {
+  width: 200px;
+}
+
+.neovim-pic {
+  padding-left: 16px;
+  height: 200px;
+}
+
+.section {
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 1000px;
+}
+
+.section-title {
+  color: var(--orange);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.section-subtitle {
+  color: var(--blue);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.section-desc {
+  font-size: 1.1rem;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.dirs-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dirs-title {
+  padding: 16px;
+  font-size: 1.5rem;
+  color: var(--purple);
+}
+
+.dirs {
+  font-size: 1.7rem;
+  color: var(--yellow);
+  display: flex; 
+  flex-direction: column;
+  width: 100px;
+  align-items: center;
+  gap: 10px;
+}
+
+.h-l {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  color: var(--green);
+  font-size: 1.3rem;
+  list-style: none;
+}
+
+.exiting-pic {
+  width: 350px;
+}
+
+#vimrc {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.gruv-green {
+  color: var(--green);
+}
+
+.small-sub {
+  color: var(--purple);
+  font-size: 1.4rem;
+}

@@ -134,6 +134,10 @@ html[data-theme='dark'] {
     --blue2: #5b95cf;
 }
 
+html {
+  background-color: var(--bg);
+}
+
 main {
   background-color: var(--bg);
   min-height: 100vh;

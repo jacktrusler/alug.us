@@ -1,11 +1,7 @@
 
-/* ----------------- */
-/* Page Styles Start */
-/* ----------------- */
-
-body {
-  --variable: 1 1 auto;
-}
+/* --------------- */
+/* vim.html styles */
+/* --------------- */
 
 :root {
     --background-color: #aaa;
@@ -133,7 +129,7 @@ blockquote {
 
 .header {
   display: flex;
-  flex: var(--variable);
+  flex: 1 1 auto;
   flex-direction: column;
 }
 

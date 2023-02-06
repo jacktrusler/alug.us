@@ -3,24 +3,24 @@
 /* ----------------- */
 
 html[data-theme='light'] {
-    --bg: #dddddd;
+    --bg: #f4f4f4;
     --fg: #3a3e40;
-    --gray: #4c5961;
+    --gray: #cccccc;
     --yellow: #FCAB10;
-    --lightred: #F8333C; 
+    --red: #F8333C; 
     --seagreen: #44AF69;
-    --blue: #5b95cf;
+    --blue: #4d78e2;
+    --blue2: #3a66aa;
 }
 
 html[data-theme='dark'] {
     --bg: #3a3e40;
-    --fg: #e9e5df;
+    --fg: #dddddd;
     --gray: #4c5961;
     --yellow: #f2cf61;
-    --lightred: #ED6A5A; 
-    --aqua: #a2c2be;
-    --blue: #4d78e2;
-    --blue2: #5b95cf;
+    --red: #ED6A5A; 
+    --blue: #5b95cf;
+    --blue2: #a2c2be;
 }
 
 html {
@@ -80,8 +80,7 @@ main {
 }
 
 .pic-border {
-  border: 5px ridge var(--bg);
-  margin-bottom: 16px;
+  border: 2px solid var(--gray);
 }
 
 .section {
@@ -94,15 +93,15 @@ main {
 }
 
 .vault {
-  color: var(--yellow);
-  padding-left: 16px;
+  padding-top: 16px;
+  color: var(--blue);
 }
 
 .vault-link {
   padding-left: 16px;
   font-size: 1.4rem;
   font-style: oblique;
-  color: var(--lightred);
+  color: var(--blue2);
 }
 
 .s-para {

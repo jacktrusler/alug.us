@@ -2,27 +2,6 @@
 /* index.html styles */
 /* ----------------- */
 
-html[data-theme='light'] {
-    --bg: #f4f4f4;
-    --fg: #3a3e40;
-    --gray: #cccccc;
-    --yellow: #FCAB10;
-    --red: #F8333C; 
-    --seagreen: #44AF69;
-    --blue: #4d78e2;
-    --blue2: #3a66aa;
-}
-
-html[data-theme='dark'] {
-    --bg: #3a3e40;
-    --fg: #dddddd;
-    --gray: #4c5961;
-    --yellow: #f2cf61;
-    --red: #ED6A5A; 
-    --blue: #5b95cf;
-    --blue2: #a2c2be;
-}
-
 html {
   background-color: var(--bg);
 }
@@ -49,7 +28,7 @@ main {
 .alug-title {
   letter-spacing: 8px;
   font-size: 5rem;
-  color: var(--yellow);
+  color: var(--orange);
 }
 
 .a-sub-c {
@@ -101,7 +80,7 @@ main {
   padding-left: 16px;
   font-size: 1.4rem;
   font-style: oblique;
-  color: var(--blue2);
+  color: var(--orange);
 }
 
 .s-para {

@@ -20,14 +20,17 @@
   <link rel="stylesheet" href="vim.css">
 
   <!-- general meta -->
-  <meta name="keywords" content="ed vi vim neovim open source bram ken thomson community">
-  <meta name="description" content="A presentation on Vim, everyone's favorite text editor :>">
+  <meta name="keywords" content="ed ex em vi stevie vim neovim open source bram ken thomson community">
+  <meta name="description" content="Vim, everyone's favorite text editor. :>">
   <meta name="theme-color" content="#282828">
   <!-- OpenGraph meta -->
   <meta property="og:title" content="ALUG Vim">
-  <meta property="og:description" content="description :D">
-  <meta property="og:image" content="../../images/vim/Vim.svg">
+  <meta property="og:description" content="Vim, everyones favorite text editor. :>">
+  <meta property="og:image" content="../../images/vim/exit_vim.jpeg">
   <meta property="og:image:alt" content="Vim">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" />
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="Vim">
@@ -104,7 +107,7 @@
 
           <tr>
             <td>[.]</td>
-            <td>places cursor at line number "." meaning any number)</td>
+            <td>places cursor at line number "." meaning any number</td>
           </tr>
           <tr>
             <td>[.,.]a</td>
@@ -160,13 +163,10 @@
           <img class="logo-pic pic-border" src="../../images/vim/Vi.jpg" />
         </div>
         <p class="section-desc">
-          The text editor that caused us to start down this twisted (righteous?) path was called Vi, written by Bill
-          Joy
-          in 1976. This was the <b>Vi(sual)</b> mode for a line editor called <b>Ex</b>, and was released as part of
-          the
-          first Berkely Software Distribution (BSD) / Unix release in March 1978. Ex in the form shipped with Vi was
-          also written by Bill Joy, but had some features influenced from Charles Haley, who modified <b>Ed</b>
-          calling
+          The true inspiration for Vim, came from Bill Joy in 1976 with a text editor called Vi. This was the
+          <b>Vi(sual)</b> mode for a line editor called <b>Ex</b>, and was released as part of the first Berkely
+          Software Distribution (BSD) / Unix release in March 1978. Ex in the form shipped with Vi was also written by
+          Bill Joy, but had some features influenced from Charles Haley, who modified <b>Ed</b> calling
           it <b>Em</b>.
           <a href="http://roguelife.org/~fujita/COOKIES/HISTORY/1BSD/exrefm.pdf" target="_blank"
             class="footnote">[1]</a>
@@ -275,7 +275,7 @@
 
           <tr>
             <td>[.]G</td>
-            <td>places cursor at line number "." meaning any number)</td>
+            <td>places cursor at line number "." meaning any number</td>
           </tr>
           <tr>
             <td>dd</td>
@@ -291,7 +291,7 @@
           </tr>
           <tr>
             <td>ctrl-d &nbsp; ctrl-u</td>
-            <td>scroll downup half a screen</td>
+            <td>scroll down/up half a screen</td>
           </tr>
           <tr>
             <td>ctrl-f &nbsp; ctrl-b</td>
@@ -303,7 +303,7 @@
           </tr>
           <tr>
             <td>u</td>
-            <td>undo, twice to redo</td>
+            <td>undo, again to redo</td>
           </tr>
           <tr>
             <td>J</td>
@@ -319,7 +319,7 @@
           </tr>
           <tr>
             <td>:%s/old/new/g</td>
-            <td>replace all occurances of [old] with [new]</td>
+            <td>replace all occurances of [old] with [new] from current file "%"</td>
           </tr>
         </table>
 
@@ -417,11 +417,11 @@
 
           <tr>
             <td>di[w t p ) } " ' `]</td>
-            <td>delete in, can delete in w(ord), t(ag), p(aragrphs), )}(blocks), or "`'(quotes)</td>
+            <td>delete in w(ord), t(ag), p(aragrphs), )}(blocks), or "`'(quotes)</td>
           </tr>
           <tr>
             <td>V</td>
-            <td>visually select whole line, enters Visual Line mode. Continue selecting with movement</td>
+            <td>visually select whole line, enters Visual Line mode.</td>
           </tr>
           <tr>
             <td>"[register]y</td>
@@ -429,7 +429,7 @@
           </tr>
           <tr>
             <td>"[register]p</td>
-            <td>paste from register [0-9][a-z]</td>
+            <td>put (paste) from register [0-9][a-z]</td>
           </tr>
           <tr>
             <td>u &nbsp Crtl-r</td>
@@ -575,7 +575,7 @@
           LSP, but also makes a larger Lua library with more functionality that can be used for plugins that may not be
           related to LSP.
         </p>
-        <a href="https://www.youtube.com/watch?v=IP3J56sKtn0" target="_blank" class="">
+        <a href="https://www.youtube.com/watch?v=CJQqDdKl5TE" target="_blank" class="">
           Here's an excellent presentation on what the Language Server Protocol is and does.
         </a>
         <a href="https://langserver.org/" target="_blank" class="">

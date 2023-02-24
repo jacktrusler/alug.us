@@ -25,7 +25,7 @@
   <meta name="theme-color" content="#282828">
   <!-- OpenGraph meta -->
   <meta property="og:title" content="ALUG Vim">
-  <meta property="og:description" content="Vim, everyones favorite text editor. :>">
+  <meta property="og:description" content="Vim, everyones favorite text editor.">
   <meta property="og:image" content="../../images/vim/Vi.jpg">
   <meta property="og:image:alt" content="Vim">
   <meta property="og:image:type" content="image/jpg">
@@ -34,7 +34,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="../../images/vim/exit_vim.jpeg">
+  <meta name="twitter:image" content="../../images/vim/vim_landing.png">
   <link rel="canonical" href="https://alug.us/pages/vim/vim.html">
 
   <link rel="icon" href="../../images/vim/Vim.svg" type="image/svg+xml">
@@ -554,16 +554,14 @@
 
         <span class="small-sub">LSP Support</span>
         <p class="section-desc">
-          What is Language Server Protocol (LSP)? Joint project between Microsoft, Redhat and CodeEnv. Bascially LSP is
+          What is Language Server Protocol (LSP)? Joint project between Microsoft, Redhat and Codenvy. Bascially LSP is
           a protocol for how clients should format requests to a language server. This removes the need for editors to
           implement their own language servers for every language, and instead separate concerns by having all languages
           implement certain actions as defined by the LSPs. Any editor with an LSP <i>client</i> can interact with any
           language that provides an LSP <i>server</i>.
           <br>
           <br>
-          LSP removes the need for a concept implemented in Vim called tags. A program like ctags is used to create an
-          index file that maps language objects, and allows these objects to be found quickly and efficiently. In LSP
-          the client makes JSON remote procedure calls (RPC) with a defined procedure like goToDefinition, then the
+          In LSP, the client makes JSON remote procedure calls (RPC) with a defined procedure like goToDefinition, then the
           server sends back a response, which the client interprets and executes. If done correctly it jumps to the
           definition of the call. The language servers can provide a lot more functionality most coders have come to
           expect out of their IDE. Including autocomplete, hover definition, type declaration, implementation, auto

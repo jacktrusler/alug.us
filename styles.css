@@ -3,8 +3,7 @@
 /* ----------------------------------------------- */
 html {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
+  font-family: 'Roboto', sans-serif; }
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -220,8 +219,27 @@ blockquote {
   font-size: 1.1rem;
 }
 
+/* Reusible utility classes */
+.bg-secondary {
+  background: var(--bg1);
+}
+
+.w-full {
+  width: 100%;
+}
+
 .flex {
   display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-xl {
+  font-size: 1.3rem;
 }
 
 .footer {
@@ -269,6 +287,13 @@ blockquote {
   padding: 8px;
   font-size: 1.1rem;
   background-color: var(--bg1);
+}
+
+.simple-code-block {
+  font-size: 1.1rem;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--bg1);
+  padding: 8px;
 }
 
 .page-container {
@@ -329,14 +354,26 @@ blockquote {
   border: 5px ridge var(--bg1);
 }
 
-.vim-landing {
-  max-width: 1000px;
+.title-pic-container {
+  display: flex;
+  justify-content: center;
+}
+
+.title-pic {
   height: auto;
+  max-width: 1000px;
 }
 
 .logo-pic-container {
   display: flex;
   position: relative;
+  width: 100%;
+}
+
+.another-pic-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
   width: 100%;
 }
 

@@ -1,4 +1,6 @@
-/* generic styles */
+/* ----------------------------------------------- */
+/* --------------- Template Styles --------------- */
+/* ----------------------------------------------- */
 html {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -99,39 +101,123 @@ sub, sup {
 	line-height: 0;
 }
 
+/* ----------------------------------------------- */
+/* ------------- Non-Generic Styles -------------- */
+/* ----------------------------------------------- */
+
+/* Gruvbox light */
 html[data-theme='light'] {
     --bg: #f9f5d7;
     --bg1: #ebdbb2;
     --bg2: #d5c4a1;
-    --fg: #3c3836;
-    --red: #9d0006;
-    --green: #79740e;
-    --yellow: #B57614;
-    --blue: #076678;
-    --purple: #8f3f71;
-    --aqua: #427b58;
-    --orange: #af3a03;
-    --gray: #7c6f64;
+    --base-content: #3c3836;
+    --primary: #af3a03;
+    --primary-content: #427b58;
+    --secondary: #B57614;
+    --secondary-content: #79740e;
+    --accent: #8f3f71;
+    --accent-content: #076678;
+    --neutral-content: #7c6f64;
 }
 
+/* Gruvbox dark */
 html[data-theme='dark'] {
     --bg: #282828;
     --bg1: #3c3836;
     --bg2: #504945;
-    --fg: #fbf1c7;
-    --red: #fb4934;
-    --green: #b8bb26;
-    --yellow: #fabd2f;
-    --blue: #83a598;
-    --purple: #d3869b;
-    --aqua: #8ec07c;
-    --orange: #fe8019;
-    --gray: #a89984;
+    --base-content: #fbf1c7;
+    --primary: #fe8019;
+    --primary-content: #8ec07c;
+    --secondary: #fabd2f;
+    --secondary-content: #b8bb26;
+    --accent: #d3869b;
+    --accent-content: #83a598;
+    --neutral-content: #a89984;
+}
+
+/* Theme from Daisy UI */
+html[data-theme='cupcake'] {
+    --bg: #F9F7F5;
+    --bg1: #EFEAE5;
+    --bg2: #E7E2DE;
+    --base-content: #291334;
+    --primary: #65C3C7;
+    --primary-content: #01393C; 
+    --secondary: #EE9FBC;
+    --secondary-content: #4F001D;
+    --accent: #EDAF3A;
+    --accent-content: #3B2600;
+    --neutral: #291334;
+    --neutral-content: #DFAFF7;
+}
+
+/* Theme from Daisy UI */
+html[data-theme='business'] {
+    --bg: #202020;
+    --bg1: #23282D;
+    --bg2: #1A1A1A;
+    --base-content: #D2D2D2;
+    --primary: #1C4E80;
+    --primary-content: #B8DCFF; 
+    --secondary: #7C8F9A;
+    --secondary-content: #002537;
+    --accent: #EA6947;
+    --accent-content: #3D0D00;
+    --neutral: #23282D;
+    --neutral-content: #C8D3E0;
+}
+
+html {
+  font-family: "montserrat", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--base-content);
 }
 
 main {
   padding-left: 10%;
   padding-right: 10%;
+}
+
+hr {
+  margin-left: 0;
+  width: 100%;
+  max-width: 1000px;
+  border: 1.5px solid var(--base-content);
+}
+	
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    text-decoration: underline;
+    filter: brightness(80%);
+}
+
+ td, th {
+  border: 3px ridge var(--bg2);
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--bg1);
+}
+
+tr:hover {
+  background-color: var(--bg2);
+}
+
+blockquote {
+  display: flex;
+  flex-flow: column wrap;
+  font-style: italic;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.1rem;
 }
 
 .flex {
@@ -143,6 +229,203 @@ main {
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  color: var(--fg);
-  border-top: 1px solid var(--fg);
+  color: var(--base-content);
+  border-top: 1px solid var(--base-content);
+}
+
+/* --------------- */
+/* pages/ styles   */
+/* --------------- */
+
+.flex-inline {
+  display: contents;
+}
+
+.quote {
+  align-self: flex-end;
+}
+
+.footnote {
+  color: var(--accent-content);
+  font-size: 0.5rem;
+  text-decoration: none;
+}
+
+.code-span {
+  background: var(--bg1);
+  padding-left: 4px;
+  padding-right: 4px;
+  color: var(--secondary);
+}
+
+.code {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  white-space: pre;
+  word-wrap: normal;
+  display: block;
+  border: 4px ridge var(--bg2);
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  font-size: 1.1rem;
+  background-color: var(--bg1);
+}
+
+.page-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.header {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.title-box {
+  display: flex;
+  gap: 16px;
+}
+
+.title {
+  color: var(--primary);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.subtitle{
+  color: var(--primary-content);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.sub-sub {
+  color: var(--neutral-content);
+  font-style: italic;
+}
+
+#theme-toggle {
+  background: var(--base-content);
+  border: 3px outset var(--neutral-content);
+  width: 48px;
+  height: 48px;
+  margin-top: 4px;
+  padding-top: 4px;
+  border-radius: 50%;
+}
+.sun {
+  color: var(--bg);
+}
+.moon {
+  color: var(--bg);
+}
+.hidden {
+  display: none;
+}
+
+.pic-border {
+  border: 5px ridge var(--bg1);
+}
+
+.vim-landing {
+  max-width: 1000px;
+  height: auto;
+}
+
+.logo-pic-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.logo-pic {
+  width: 200px;
+}
+
+.neovim-pic {
+  padding-left: 16px;
+  height: 200px;
+}
+
+.section {
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 1000px;
+}
+
+.section-title {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.section-subtitle {
+  color: var(--primary-content);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.section-desc {
+  font-size: 1.1rem;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.dirs-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dirs-title {
+  padding: 16px;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.dirs {
+  font-size: 1.7rem;
+  color: var(--secondary);
+  display: flex; 
+  flex-direction: column;
+  width: 100px;
+  align-items: center;
+  gap: 10px;
+}
+
+.h-l {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  color: var(--primary-content);
+  font-size: 1.3rem;
+  list-style: none;
+}
+
+.exiting-pic {
+  width: 350px;
+}
+
+#vimrc {
+  color: var(--accent-content);
+  cursor: pointer;
+}
+
+.gruv-secondary-content {
+  color: var(--secondary-content);
+}
+
+.small-sub {
+  color: var(--primary-content);
+  font-size: 1.4rem;
 }

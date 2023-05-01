@@ -1,6 +1,3 @@
-/* ----------------------------------------------- */
-/* --------------- Template Styles --------------- */
-/* ----------------------------------------------- */
 html {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; }
@@ -100,10 +97,6 @@ sub, sup {
 	line-height: 0;
 }
 
-/* ----------------------------------------------- */
-/* ------------- Non-Generic Styles -------------- */
-/* ----------------------------------------------- */
-
 /* Gruvbox light */
 html[data-theme='light'] {
     --bg: #f9f5d7;
@@ -156,7 +149,7 @@ html[data-theme='business'] {
     --bg1: #23282D;
     --bg2: #1A1A1A;
     --base-content: #D2D2D2;
-    --primary: #1C4E80;
+    --primary: #409AF5;
     --primary-content: #B8DCFF; 
     --secondary: #7C8F9A;
     --secondary-content: #002537;

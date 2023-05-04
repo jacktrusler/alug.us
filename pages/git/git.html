@@ -125,14 +125,146 @@
           </a>
           <br>
 
+          <hr>
+          <h2 class="section-title">What's different about Git?</h2>
+          <h3 class="section-subtitle">Great question partner</h3>
+          <hr>
           <div class="another-pic-container">
-            <img class="centered-pic pic-border" src="../../images/git/xkcd_git.png" />
+            <img class="centered-pic pic-border" src="../../images/git/deltas.png" />
           </div>
+          <p class="section-desc">
+            Old version control systems saw files as a series of deltas, you would save all the files under version 1,
+            then look at the files as a series of changes from the baseline.
+          </p>
+          <div class="another-pic-container">
+            <img class="centered-pic pic-border" src="../../images/git/snapshots.png" />
+          </div>
+          <p class="section-desc">
+            Git sees commits as a series of snapshots. Pointers are updated if the files haven't changed.
+          </p>
+          <br>
+
           <hr>
           <h2 class="section-title">The Three States</h2>
           <h3 class="section-subtitle">Working Tree / Staging Area / .git Directory</h3>
           <hr>
-        </div>
+          <div class="section-desc">
+            <br>
+            <span class="small-sub">Git has three main states files can reside in:</span>
+            <br></br>
+            <ul class="list">
+              <li>
+                <strong>Modified:</strong> Modified means that you have changed the file but have not committed it to
+                your
+                database yet.
+              </li>
+              <br>
+              <li>
+                <strong>Staged:</strong> Staged means that you have marked a modified file in its current version to go
+                into your next commit snapshot.
+              </li>
+              <br>
+              <li>
+                <strong>Committed:</strong> Committed means that the data is safely stored in your local database.
+              </li>
+              <br>
+            </ul>
+            <div class="another-pic-container">
+              <img class="centered-pic pic-border" src="../../images/git/areas.png" />
+            </div>
+            <br>
+
+            <span class="small-sub">Git has three main types of objects that are stored:</span>
+            <br></br>
+
+            <ul class="list">
+              <li>
+                <strong>Blobs:</strong> which are usually files that are compressed and hashed.
+              </li>
+              <br>
+              <li>
+                <strong>Trees:</strong> which are structures that point to the files, analogous to directories.
+              </li>
+              <br>
+              <li>
+                <strong>Commits</strong> which store information about the hash values, who saved them, when and why
+                they
+                were saved.
+              </li>
+              <br>
+            </ul>
+            <div class="another-pic-container">
+              <img class="centered-pic pic-border" src="../../images/git/data_model.png" />
+            </div>
+            <br>
+            Everything in git is checksummed before it is stored, and then is referred to by that checksum.
+            Git uses a SHA-1 hash to perform the checksumming --> 40 Character string composed of hex chars. And
+            calculated based on contents of file or directory structure. Here's an example of a SHA-1 hash.
+            <code>24b9da6552252987aa493b52f8696cd6d3b00373</code>
+            <br></br>
+          </div>
+
+          <hr>
+          <h2 class="section-title">Starting a Repository</h2>
+          <h3 class="section-subtitle">The Watering Hole</h3>
+          <hr>
+
+          <hr>
+          <h2 class="section-title">Show me some Commands!</h2>
+          <h3 class="section-subtitle">Hold your horses now</h3>
+          <hr>
+
+          <br>
+          <span class="small-sub">Configuration</span>
+          <div class="block-desc">
+            <span>git config</span>
+            <span>git config --list --show-origin</span>
+            <span>git config --global user.name "John Doe"</span>
+            <span>git config --global user.email johndoe@example.com</span>
+            <span>git config --global core.editor vim</span>
+            <span>git config --global alias.co "checkout"</span>
+          </div>
+
+          <br>
+          <span class="small-sub">Diffs and Commits</span>
+          <div class="block-desc">
+            <span>git diff <commit> (HEAD, HEAD^, HEAD~3)</span>
+            <span>git diff <commit> --staged</span>
+            <span>git commit --amend</span>
+            <span>git reset --hard `commit`</span>
+            <span>git reset --soft `commit`</span>
+          </div>
+
+          <br>
+          <div class="another-pic-container">
+            <img class="centered-pic pic-border" src="../../images/git/git_reset.png" />
+          </div>
+          <br>
+
+          <br>
+          <span class="small-sub">Branching</span>
+          <div class="block-desc">
+            <span>git branch somebranch (only makes a new branch)</span>
+            <span>git checkout -b somebranch (makes a branch and switches to it)</span>
+            <span>git switch -c somebranch (-c means create, Git 2.23)</span>
+            <span>git branch -vv (shows all branches and their latest commit message, extra v tracking info)</span>
+            <span>git branch --merged (shows branches that are merged into current branch)</span>
+          </div>
+
+          <br>
+          <span class="small-sub">Remote</span>
+          <div class="block-desc">
+            <span>git remote -v</span>
+            <span>git remote show `remote` (i.e origin)</span>
+            <span>git ls-remote origin</span>
+            <span>git push --set-upstream origin master (or feature branch)</span>
+            <span>git checkout --track `remote`/`branch` (i.e origin/somebranch)</span>
+          </div>
+
+          <br>
+          <span class="code">That's all for me, now I reckon ya'll better git out of here and start version
+            controlling your software. Yeeeeeee haw.</span>
+
   </main>
   <div class="footer">
     ALUG 2023

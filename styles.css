@@ -134,7 +134,7 @@ html[data-theme='cupcake'] {
     --bg2: #E7E2DE;
     --base-content: #291334;
     --primary: #65C3C7;
-    --primary-content: #01393C; 
+    --primary-content: #034448; 
     --secondary: #EE9FBC;
     --secondary-content: #4F001D;
     --accent: #EDAF3A;
@@ -280,6 +280,15 @@ blockquote {
   padding: 8px;
   font-size: 1.1rem;
   background-color: var(--bg1);
+}
+
+.block-desc {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  background: var(--bg1);
+  padding: 12px;
+  color: var(--secondary-content);
 }
 
 .simple-code-block {

@@ -151,8 +151,8 @@ html[data-theme='business'] {
     --base-content: #D2D2D2;
     --primary: #409AF5;
     --primary-content: #B8DCFF; 
-    --secondary: #7C8F9A;
-    --secondary-content: #002537;
+    --secondary: #002537;
+    --secondary-content: #7C8Fda;
     --accent: #EA6947;
     --accent-content: #3D0D00;
     --neutral: #23282D;
@@ -229,6 +229,7 @@ blockquote {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .text-xl {
@@ -254,6 +255,11 @@ blockquote {
 
 .quote {
   align-self: flex-end;
+}
+
+.link-end {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .footnote {
@@ -404,6 +410,13 @@ blockquote {
   color: var(--primary-content);
   font-size: 1.3rem;
   font-weight: 500;
+}
+
+.styled-link {
+  color: var(--neutral-content);
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .section-desc {

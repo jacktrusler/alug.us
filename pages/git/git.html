@@ -172,6 +172,9 @@
             <div class="another-pic-container">
               <img class="centered-pic pic-border" src="../../images/git/areas.png" />
             </div>
+            <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F" target="_blank" class="link-end">
+              what is git?
+            </a>
             <br>
 
             <span class="small-sub">Git has three main types of objects that are stored:</span>
@@ -196,6 +199,9 @@
             <div class="another-pic-container">
               <img class="centered-pic pic-border" src="../../images/git/data_model.png" />
             </div>
+            <a href=" https://git-scm.com/book/en/v2/Git-Internals-Git-Objects " target="_blank" class="link-end">
+              git objects
+            </a>
             <br>
             Everything in git is checksummed before it is stored, and then is referred to by that checksum.
             Git uses a SHA-1 hash to perform the checksumming --> 40 Character string composed of hex chars. And
@@ -205,9 +211,25 @@
           </div>
 
           <hr>
-          <h2 class="section-title">Starting a Repository</h2>
+          <h2 class="section-title">Starting a Repository on a Server</h2>
           <h3 class="section-subtitle">The Watering Hole</h3>
           <hr>
+          <p>
+            A git remote repository is generally a <strong>bare</strong> repository. This means a repository that has no
+            working directory, no unpacked files on disk. It simply has all of the git repository information, along
+            with all the blobs.
+          </p>
+          <div class="block-desc">
+            <span>git init</span>
+            <span>git init --bare --shared</span>
+            <span>git clone domain/directory.git</span>
+            <span>git pull</span>
+            <span>git push</span>
+          </div>
+          <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server" target="_blank"
+            class="link-end">
+            git on the server
+          </a>
 
           <hr>
           <h2 class="section-title">Show me some Commands!</h2>
@@ -246,8 +268,6 @@
           <div class="block-desc">
             <span>git branch somebranch (only makes a new branch)</span>
             <span>git checkout -b somebranch (makes a branch and switches to it)</span>
-            <span>git switch -c somebranch (-c means create, Git 2.23)</span>
-            <span>git branch -vv (shows all branches and their latest commit message, extra v tracking info)</span>
             <span>git branch --merged (shows branches that are merged into current branch)</span>
           </div>
 
@@ -256,14 +276,25 @@
           <div class="block-desc">
             <span>git remote -v</span>
             <span>git remote show `remote` (i.e origin)</span>
-            <span>git ls-remote origin</span>
             <span>git push --set-upstream origin master (or feature branch)</span>
             <span>git checkout --track `remote`/`branch` (i.e origin/somebranch)</span>
           </div>
 
           <br>
-          <span class="code">That's all for me, now I reckon ya'll better git out of here and start version
+          <span class="small-sub">Last but not least...</span>
+          <span>If you forget all of this information, or you find yourself in a pickle, there's a great website to
+            reference:</span>
+          <br>
+          <a href="https://ohshitgit.com/" target="_blank" class="styled-link">
+            Oh Shit, Git!?!
+          </a>
+
+          <br>
+          <span class="simple-code-block">That's all for me, now I reckon ya'll better <strong>git</strong> outta here
+            and start
+            version
             controlling your software. Yeeeeeee haw.</span>
+          <br>
 
   </main>
   <div class="footer">

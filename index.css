@@ -59,11 +59,6 @@ main {
   border: 2px solid var(--neutral-content);
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-}
-
 .rule {
   width: 100%;
 }

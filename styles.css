@@ -398,6 +398,7 @@ blockquote {
   display: flex;
   flex-flow: column wrap;
   max-width: 1000px;
+  width: 100%;
 }
 
 .section-title {
@@ -421,6 +422,7 @@ blockquote {
 
 .section-desc {
   font-size: 1.1rem;
+  width: 100%;
 }
 
 .box {
@@ -480,4 +482,10 @@ blockquote {
 .small-sub {
   color: var(--primary-content);
   font-size: 1.4rem;
+}
+
+.hash {
+  width: 100%;
+  overflow-wrap: break-word;
+  color: var(--secondary-content);
 }

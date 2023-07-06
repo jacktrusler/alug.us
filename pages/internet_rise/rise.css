@@ -1,0 +1,25 @@
+HTML {
+  background: #feffbe;
+}
+
+#page-title {
+  font-size: 3rem;
+  color: #472877;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: #472836;
+  font-weight: bold;
+}
+
+P {
+  font-size: 1.2rem;
+}
+
+BLOCKQUOTE {
+  font-size: 1.2rem;
+  border: solid black 1px;
+  padding: 8px;
+  background: #d7ebba
+}

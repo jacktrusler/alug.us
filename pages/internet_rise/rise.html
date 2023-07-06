@@ -17,7 +17,6 @@
   </script>
 
   <link rel="stylesheet" href="../../styles.css">
-  <link rel="stylesheet" href="./vim.css">
 
   <!-- general meta -->
   <meta name="keywords"
@@ -42,89 +41,104 @@
   <link rel="apple-touch-icon" href="../../images/internet/ecology.svg">
 </head>
 
-<body>
+<!-- All capitalized tags can be found in the HTML 2.0 spec -->
+
+<BODY>
   <!-- Content -->
-  <main>
-    <div class="page-container">
-      <div class="header">
-        <hr>
-        <div class="title-box">
-          <h1 class="title">The Rise of the Internet</h1>
-        </div>
-      </div>
+  <MENU>
+    <H1>The Rise of the Internet</H1>
+    <BR>
+    <BLOCKQUOTE>
+      "(What) internet hucksters won't tell you is that the internet is one big ocean of unedited data, without any
+      pretense of completeness. Lacking editors, reviewers or critics, the Internet has become a wasteland of unfiltered
+      data. You don't know what to ignore and what's worth reading."
+      <BR>
+      <A HREF="https://www.newsweek.com/clifford-stoll-why-web-wont-be-nirvana-185306">— Clifford Stoll for Newsweek
+        2/26/1995</A>
+    </BLOCKQUOTE>
+    <BR>
+    <H2>1980 - 1990 - Tim Berners Lee and the Early Internet</H2>
+    <P>The World Wide Web began at CERN, the European Laboratory for Particle Physics in Geneva, Switzerland. Tim
+      came up with an idea to collaborate with institutions from all over the world. He had an idea to organize and
+      pool together imformation, by creating a document in which you could link to the files themselves, this was
+      called hypertext. His first hypertext system he named 'Enquire'. The prototype web browser came out 10 years
+      later for the NeXT computer. <A TARGET="_blank" HREF='https://www.w3.org/People/Raggett/book4/ch02.html'>[1]</A>
+    <P>
+      <A TARGET="_blank" HREF='https://worldwideweb.cern.ch/browser/'>First Web Brower - World Wide Web</A>
+    <P>The World Wide Web didn't come out of a vacuum. In 1982 the Internet Protocol Suite (TCP/IP) was
+      standardized, which allowed for worldwide proliferation of networks. By 1995 A Domain Name System (DNS) was
+      established which allowed for assigning Internet Protocol addresses to domain names. In 1986 the National
+      Science Foundation Network (NSFNet) provided access to supercomputer sites to download and relay information
+      (speeds as high as 56 kbit/s!). Internet service providers emerged in 1989, and Tim Berners Lee was working on
+      his web creation during this time. <A TARGET="_blank" HREF='https://en.wikipedia.org/wiki/Internet'>[2]</A>
+    </P>
+    <H2>1990 - 1995 - HTML and the HTTP</H2>
+    <P>
+      The Hypertext Transfer Protocol (HTTP) was a protocol written by Tim as a means of fetching and displaying
+      Hypertext Markup language (HTML). It functions as a request-response protocol in the client-server model.
+      The request in most cases is a GET request, which is in a format defined by the Request For Comment (RFC)
+      9110.
+    </P>
 
-      <MENU>
-        <H2>1980 - 1990 - Tim Berners Lee and the Early Internet</H2>
-        <P>The World Wide Web began at CERN, the European Laboratory for Particle Physics in Geneva, Switzerland. Tim
-          came up with an idea to collaborate with institutions from all over the world. He had an idea to organize and
-          pool together imformation, by creating a document in which you could link to the files themselves, this was
-          called hypertext. His first hypertext system he named 'Enquire'. The prototype web browser came out 10 years
-          later for the NeXT computer. <A TARGET="_blank"
-            HREF='https://www.w3.org/People/Raggett/book4/ch02.html'>[1]</A>
-        <P>
-          <A TARGET="_blank" HREF='https://worldwideweb.cern.ch/browser/'>First Web Brower - World Wide Web</A>
-        <P>The World Wide Web didn't come out of a vacuum. In 1982 the Internet Protocol Suite (TCP/IP) was
-          standardized, which allowed for worldwide proliferation of networks. By 1995 A Domain Name System (DNS) was
-          established which allowed for assigning Internet Protocol addresses to domain names. In 1986 the National
-          Science Foundation Network (NSFNet) provided access to supercomputer sites to download and relay information
-          (speeds as high as 56 kbit/s!). Internet service providers emerged in 1989, and Tim Berners Lee was working on
-          his web creation during this time. <A TARGET="_blank" HREF='https://en.wikipedia.org/wiki/Internet'>[2]</A>
-        </P>
-        <H2>1990 - 1995 - HTML and the HTTP</H2>
-        <P>
-          The Hypertext Transfer Protocol (HTTP) was a protocol written by Tim as a means of fetching and displaying
-          Hypertext Markup language (HTML). It functions as a request-response protocol in the client-server model.
-          The request in most cases is a GET request, which is in a format defined by the Request For Comment (RFC)
-          9110.
-        </P>
+    <H3>Request</H3>
+    <CODE>
+      Request URL: https://alug.us/
+      <BR>
+      Request Method: GET
+      <BR>
+      Remote Address: 23.119.21.132:443
+      <BR>
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko)
+      Chrome/114.0.0.0 Safari/537.36
+      <BR>
+      Accept:
+      text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+      <BR>
+      Accept-Encoding: gzip, deflate, br
+      <BR>
+      Accept-Language: en-US,en;q=0.9
+    </CODE>
+    <BR></BR>
+    <H3>Response</H3>
+    <CODE>
+      Accept-Ranges: bytes
+      <BR>
+      Content-Length: 3751
+      <BR>
+      Content-Type: text/html
+      <BR>
+      Status Code: 200
+      <BR>
+      Date: Wed, 28 Jun 2023 01:43:06 GMT
+      <BR>
+      Etag: "6453fd93-ea7"
+      <BR>
+      Last-Modified: Thu, 04 May 2023 18:46:43 GMT
+      <BR>
+      Server: nginx/1.22.1
+    </CODE>
 
-        <h3>Request</h3>
-        <BR>
-        <CODE>
-          Request URL: https://alug.us/
-          <BR>
-          Request Method: GET
-          <BR>
-          Remote Address: 23.119.21.132:443
-          <BR>
-          User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko)
-          Chrome/114.0.0.0 Safari/537.36
-          <BR>
-          Accept:
-          text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-          <BR>
-          Accept-Encoding: gzip, deflate, br
-          <BR>
-          Accept-Language: en-US,en;q=0.9
-        </CODE>
-        <BR>
-        <BR>
-        <h3>Response</h3>
-        <BR>
-        <CODE>
-          Accept-Ranges: bytes
-          <BR>
-          Content-Length: 3751
-          <BR>
-          Content-Type: text/html
-          <BR>
-          Status Code: 200
-          <BR>
-          Date: Wed, 28 Jun 2023 01:43:06 GMT
-          <BR>
-          Etag: "6453fd93-ea7"
-          <BR>
-          Last-Modified: Thu, 04 May 2023 18:46:43 GMT
-          <BR>
-          Server: nginx/1.22.1
-        </CODE>
+    <P>
+      The first written HTML was based off of Standard Generalized Markup Language (SGML) <A
+        HREF="https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language">[3]</A> and contained many of the
+      basic tags used in HTML documents. There was no formal HTML definition until 1995 when the HTML 2.0
+      specification was formalized by Tim Berners-Lee and Daniel W. Connolly.
+    </P>
+    <A HREF="https://www.ietf.org/rfc/rfc1866.txt">RFC-1866</A>
+    <BR></BR>
+    <A HREF="https://www.w3.org/MarkUp/html-spec/html.dtd">The HTML 2.0 Document Type Definition (DTD)</A>
+    <BR></BR>
 
-        <P>
-          The first written HTML was based off of SGML and contained many of the basic tags used in HTML documents.
-          There was no formal HTML definition until 1995 when the HTML 2.0 specification was written by Tim.
+    <H2>The HTML 2.0 Specification</H2>
+    <P>
+      I was surprised to find that HTML 2.0 has quite a lot of functionality and tags that are still commonly used
+      all the time in the modern web. This whole page is written using <EM>HTML 2.0 Tags!</EM>
+    </P>
+    <BR>
+    <A HREF="./js_css.html">
+      <H2>Next: Javascript and CSS --></H2>
+    </A>
 
-        <H2>Javascript and CSS</H2>
 
-    </div>
-  </main>
-</body>
+
+</BODY>

@@ -372,6 +372,11 @@ blockquote {
   max-width: 1000px;
 }
 
+.pic-512max {
+  height: auto;
+  max-width: 512px;
+}
+
 .logo-pic-container {
   display: flex;
   position: relative;

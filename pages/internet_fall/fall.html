@@ -81,22 +81,78 @@
       <div class="section">
         <hr>
         <h2 class="section-title">Revisiting the DOM</h2>
+        <h3 class="section-subtitle">The history of the DOM</h3>
         <hr>
-        <div class="title-pic">
-          <img src="../../images/internet/DOM.png" />
-        </div>
         <p class="section-desc">
           Soon after javascript was invented it was quickly understood that there needed to be a method to access
           elements on a webpage. Netscape and Internet Explorer (IE) 3.0 were locked in battle in the early browser
-          wars, and each of them developed their own verson of the DOM known later as "DOM Level 0" or the "Legacy DOM".
+          wars, and each of them developed their own verson of the Document Object Model known later as "DOM Level 0" or
+          the "Legacy DOM". The obvious problem that arose is that methods to access the DOM from javascript were
+          different between platforms. In addition, both were lacking in much of the functionality we come to expect
+          from the DOM today.
 
-          World Wide Web
-          Consortium (W3C) developed a recommendation
-        <p>
-          <a class="section-desc" href=https://www.computerhope.com/unix/ued.htm>Here is a comprehensive list of Ed
-            commands</a><span class="section-desc"> if for some
-            crazy reason you want to become an Ed legend.</span>
+          To combat this eventual devolution into chaos the World Wide Web Consortium (W3C)
+          developed a recommendation in late 1998. This was known as "DOM Level 1". The final recommendation by W3C was
+          published in 2004. Development migrated to the Web Hypertext Application Technology Working Group (WHATWG).
+          Here was their recommended standard for the DOM.
         </p>
+
+        <div class="pic-512max">
+          <img src="../../images/internet/WHATWG_DOM.png" />
+        </div>
+
+        <p class="section-desc">
+          DOM Level 4 is the current iteration, and it was reassigned from WHATWG to the HTML Working Group, but the new
+          recommendations are based off of the WHATWG living standard, this is the standard for the DOM that we still
+          use today.
+        <p>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">OK so what the hell is the DOM?</h2>
+        <h3 class="section-subtitle">I swear I'm getting to it</h3>
+        <hr>
+        <p class="section-desc">
+          DOM level 1 introduced two key interfaces, the <code class="code-span">document</code> and
+          <code class="code-span">element</code>
+          interfaces. This allowed scripts to more easily access and alter the structure, style and content of web
+          documents. The best way I heard javascript described is a control panel for APIs that access various parts of
+          the web browser. We use methods on the <code class="code-span">document</code> and
+          <code class="code-span">element</code>
+          objects that are exposed by the web browser in order to interact with the DOM plumbing that's written in
+          whatever language the browser is written in. In chrome this is all done through their Blink engine.
+        </p>
+        <div class="pic-512max">
+          <img src="../../images/internet/DOM.png" />
+        </div>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">Lets see some code!</h2>
+        <h3 class="section-subtitle">The plain Jane way of interacting with a browser</h3>
+        <hr>
+        <p class="section-desc">
+          First, open your web tools:
+          <code class="code"><i>Windows/Linux:</i> F12 or CTRL + Shift + i</code>
+          <code class="code"><i>MacOS:</i> CMD + Option + i</code> If you click on the
+          <code class="code-span">Sources</code> tab you can see in the
+          <code class="code-span">index.js</code> file I have defined some code for interacting with the webpage by
+          switching the color scheme from light to dark, using the sun/moon icon at the top of the page. It also sets
+          the theme in
+          <code class="code-span">Local Storage</code> and retrieves it if it exists when the page first loads.
+          <code class="code-span">Local Storage</code> can be found in the <code class="code-span">Application</code>
+          tab of your web browser. This code uses a lot of the APIs that are exposed on the Document object in
+          javascript.
+        </p>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">The Rise of jQuery</h2>
+        <h3 class="section-subtitle">Can somebody, anybody make web dev less painful?</h3>
+        <hr>
       </div>
 
     </div>

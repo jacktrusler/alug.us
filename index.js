@@ -28,6 +28,7 @@ function downloadVimrc() {
 const toggle = document.getElementById("theme-toggle");
 const sun = document.getElementById("sun");
 const moon = document.getElementById("moon");
+const logo = document.getElementById("logo-div");
 
 const storedTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 if (storedTheme) {
@@ -35,23 +36,66 @@ if (storedTheme) {
 }
 
 const cT = document.documentElement.getAttribute("data-theme");
-if (cT === "dark") { moon.setAttribute("class", "moon hidden"); }
-if (cT === "light") { sun.setAttribute("class", "sun hidden"); }
+if (cT === "dark" && moon) { moon.setAttribute("class", "moon hidden"); }
+if (cT === "light" && sun) { sun.setAttribute("class", "sun hidden"); }
 
-toggle.onclick = function() {
+if (toggle) {
+  toggle.onclick = function() {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    let targetTheme = "light";
+
+    if (currentTheme === "light") {
+      targetTheme = "dark";
+      moon.setAttribute("class", "moon hidden")
+      sun.setAttribute("class", "sun");
+    } else {
+      sun.setAttribute("class", "sun hidden");
+      moon.setAttribute("class", "moon");
+    }
+
+    document.documentElement.setAttribute('data-theme', targetTheme);
+    localStorage.setItem('theme', targetTheme);
+  }
+}
+
+logo.onclick = function() {
   const currentTheme = document.documentElement.getAttribute("data-theme");
   let targetTheme = "light";
-
   if (currentTheme === "light") {
     targetTheme = "dark";
-    moon.setAttribute("class", "moon hidden")
-    sun.setAttribute("class", "sun");
-  } else {
-    sun.setAttribute("class", "sun hidden");
-    moon.setAttribute("class", "moon");
   }
-
   document.documentElement.setAttribute('data-theme', targetTheme);
   localStorage.setItem('theme', targetTheme);
-};
+}
 
+// ----------------------------
+// JQuery
+// ----------------------------
+
+$('#2021-container').hide();
+
+$('#2021-year').click(function() {
+  $('#2021-container').toggle(500);
+})
+
+const months = [
+  'january',
+  'february',
+  'march',
+  'april',
+  'may',
+  'june',
+  'july',
+  'august',
+  'september',
+  'october',
+  'november',
+  'december',
+]
+
+for (const month of months) {
+  $(`#${month}-2021-container`).hide();
+  $(`#${month}-2021-title`).click(function() {
+    $(`#${month}-2021-container`).toggle(300);
+  })
+}

@@ -58,14 +58,16 @@ if (toggle) {
   }
 }
 
-logo.onclick = function() {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  let targetTheme = "light";
-  if (currentTheme === "light") {
-    targetTheme = "dark";
+if (logo) {
+  logo.onclick = function() {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    let targetTheme = "light";
+    if (currentTheme === "light") {
+      targetTheme = "dark";
+    }
+    document.documentElement.setAttribute('data-theme', targetTheme);
+    localStorage.setItem('theme', targetTheme);
   }
-  document.documentElement.setAttribute('data-theme', targetTheme);
-  localStorage.setItem('theme', targetTheme);
 }
 
 // ----------------------------

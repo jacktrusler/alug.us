@@ -34,11 +34,11 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="../../images/internet/ecology.svg">
+  <meta name="twitter:image" content="../../images/internet/fall/internet_fall.svg">
   <link rel="canonical" href="https://alug.us/pages/internet_fall/fall.html">
 
-  <link rel="icon" href="../../images/internet/internet_fall.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="../../images/internet/internet_fall.svg">
+  <link rel="icon" href="../../images/internet/fall/internet_fall.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../images/internet/fall/internet_fall.svg">
 </head>
 
 <body>
@@ -74,7 +74,7 @@
         <span class="sub-sub">...Right?</span>
         <hr>
         <div class="title-pic pic-border">
-          <img src="../../images/internet/javascript-guy.jpg" />
+          <img src="../../images/internet/fall/javascript-guy.jpg" />
         </div>
       </div>
 
@@ -97,8 +97,10 @@
           Here was their recommended standard for the DOM.
         </p>
 
-        <div class="pic-512max">
-          <img src="../../images/internet/WHATWG_DOM.png" />
+        <div class="flex-center flex-wrap">
+          <div class="pic-512max">
+            <img src="../../images/internet/fall/WHATWG_DOM.png" />
+          </div>
         </div>
 
         <p class="section-desc">
@@ -123,8 +125,10 @@
           objects that are exposed by the web browser in order to interact with the DOM plumbing that's written in
           whatever language the browser is written in. In chrome this is done through their Blink engine.
         </p>
-        <div class="pic-512max">
-          <img src="../../images/internet/DOM.png" />
+        <div class="flex-center flex-wrap">
+          <div class="pic-512max">
+            <img src="../../images/internet/fall/DOM.png" />
+          </div>
         </div>
       </div>
 
@@ -135,7 +139,7 @@
         <hr>
         <p class="section-desc">
           Time to actually use our favorite <i>Dynamic, Weakly typed, Prototype-Based, Single-Threaded,
-            Garbage-Collected, Just-In-Time-Compiled languague:</i> <span class="text-xl code-span">Javascript</span>
+            Garbage-Collected, Just-In-Time-Compiled languague:</i> <span class="secondary-content">Javascript</span>
           First, open your web tools:
           <code class="code"><i>Windows/Linux:</i> F12 or CTRL + Shift + i</code>
           <code class="code"><i>MacOS:</i> CMD + Option + i</code> If you click on the
@@ -152,8 +156,181 @@
 
       <div class="section">
         <hr>
-        <h2 class="section-title">The Rise of jQuery</h2>
+        <h2 class="section-title">Putting the J in jQuery</h2>
         <h3 class="section-subtitle">Can somebody, anybody make web dev less painful?</h3>
+        <hr>
+        <div class="flex-center flex-wrap">
+          <div class="another-pic-container">
+            <img class="centered-pic pic-border" src="../../images/internet/fall/jQuery-logo.png" />
+          </div>
+        </div>
+        <p class="section-desc">
+          Part of the problem for developers during the browser wars was that cross browser support was painful.
+          Accessing
+          the dom was not as standardized as it is today, many web browsers had their own baked in methods for doing
+          things, and some methods that were available in one browser, was not available in the others. John Resig, the
+          inventor of <span class="secondary-content">jQuery</span>, came along and created a library that made it easy
+          to write javascript in one browser, and
+          have it work in all the others. There were a few other things that jQuery brought to the table.
+        </p>
+        <ol class='ordered-list'>
+          <li>Exposed the jQuery object, to let developers write their own plugins.</li>
+          <li>Standardized asynchronous Javascript (AJAX) and made event handlers easy. </li>
+          <li>Baked in simple animations, that made websites look good.</li>
+          <li>Was one of the first frameworks with extensive documentation.</li>
+        </ol>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">NodeJS and the V8 Engine</h2>
+        <h3 class="section-subtitle">Javascript: Everywhere</h3>
+        <hr>
+        <div class="flex-center flex-wrap">
+          <object type="image/svg+xml" class="pic-border larger-logo"
+            data="../../images/internet/fall/tools/nodejs.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border larger-logo" data="../../images/internet/fall/tools/v8.svg">
+          </object>
+        </div>
+        <p class="section-desc">
+          The coders in the lab at google in the year 2008 came up with what may well be the biggest contributer to the
+          incredible success of the Javascript language, and that is the <span class="secondary-content">V8
+            engine</span>. Not only did this greatly improve performance of the language, it also set the stage for
+          javascript to be taken seriously as a fullstack programming language, which happened in large part due to the
+          (cursed?) invention of <span class="secondary-content">Node.js</span> by Ryan Dahl. Now, you can run
+          javascript outside of the web browser. These two combined innovations allowed for the <i
+            class="secondary-content">Javascript Everywhere</i> paradigm to become a reality.
+        </p>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">Typescript</h2>
+        <h3 class="section-subtitle">Microsoft might be onto something...</h3>
+        <hr>
+        <div class="flex-center flex-wrap">
+          <div class="another-pic-container">
+            <img class="centered-pic pic-border" src="../../images/internet/fall/typescript.png" />
+          </div>
+        </div>
+        <p class="section-desc">
+          As web and javascript projects became increasingly large, the need for language features for more well
+          developed languages, like type checking, evolved for javascript. Typescript allowed for web apps to be more
+          secure, and check for common pitfalls, most of all though it did static typechecking, which prevented the
+          common errors that would occur in large javascript applications. Typescript is a superset of javascript, and
+          when it is run it is first compiled to javascript, then executed. Typescript was released by Microsoft in
+          October, 2012.
+        </p>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">Let the frameworks, begin</h2>
+        <h3 class="section-subtitle">Frontend, backend from A to V</h3>
+        <hr>
+        <div class="flex-center flex-wrap">
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/angular.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/boostrap.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/codeigniter.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/django.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/dotnet.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/expressjs.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/flask.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/laravel.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/nextjs.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/rails.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/react.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/spring.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/svelte.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border framework-logo"
+            data="../../images/internet/fall/frameworks/vuejs.svg">
+          </object>
+        </div>
+        <p class="section-desc">
+          At this point a ton of frameworks began appearing trying to make the web easier to develop on. Above are some
+          of the most popular frontend and backend frameworks for developing the web.
+        </p>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">React, Angular and the future of the web</h2>
+        <h3 class="section-subtitle">Another way of manipulating state</h3>
+        <hr>
+        <div class="flex-center flex-wrap">
+          <object type="image/svg+xml" class="pic-border larger-logo"
+            data="../../images/internet/fall/frameworks/angular.svg">
+          </object>
+          <object type="image/svg+xml" class="pic-border larger-logo"
+            data="../../images/internet/fall/frameworks/react.svg">
+          </object>
+        </div>
+        <p class="section-desc">
+          Though the fight to become the web's most used and loved framework is never-ending, the current frontend
+          frameworks that stand above the rest of the pack in terms of adoption are the new 2016 version of <span
+            class="secondary-content">Angular</span>, and <span class="secondary-content">ReactJS</span>. These two
+          separate concerns in a very different way with angular following the Model View Controller (MVC) pattern,
+          which directly affects the DOM. Whereas React uses a virtual DOM, that is manipulated and diffed against the
+          real DOM, before changes are made. This is 2023 though and the web is changing faster than anyone can keep up
+          with, I'm interested (and mildly apprehensive) to see where the web takes us in the next 10 years.
+        </p>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">Some Excellent Links</h2>
+        <h3 class="section-subtitle">So you too can explore the internet's winding history!</h3>
+        <hr>
+        <p class="section-desc">
+          Here are a few of the best videos I found while researching for this presentation, I hope you enjoy them.
+        </p>
+
+        <a href="https://www.youtube.com/watch?v=41mnNyMxPOA">The Weird History of Javascript</a>
+        <a href="https://www.youtube.com/watch?v=5SzUDgDvCzc">John Resig: Building jQuery</a>
+        <a href="https://www.youtube.com/watch?v=41mnNyMxPOA">How We Got Here - The History of Web Development - Richard
+          Campbell</a>
+        <a href="https://www.youtube.com/watch?v=CseCDFed458">The History of JavaScript: a timeline of programming
+          language evolution over the past 20 years</a>
+        <a href="https://www.youtube.com/watch?v=Wm_xI7KntDs">Why React Won</a>
+        <a href="https://frontendmasters.com/courses/javascript-jquery-dom/">Advanced JS Fundaments to jQuery</a>
+
+        <p class="section-desc">
+          Here's the text that I read.
+        </p>
+
+        <a href="https://en.wikipedia.org/wiki/Document_Object_Model">Wikipedia DOM</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">MDN Intro to the
+          DOM</a>
+        <a href="https://www.statista.com/statistics/1124699/worldwide-developer-survey-most-used-frameworks-web/">2023
+          Most used frameworks</a>
+
         <hr>
       </div>
 

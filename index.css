@@ -169,14 +169,13 @@ body {
 }
 
 main {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
 hr {
   margin-left: 0;
   width: 100%;
-  max-width: 1000px;
   border: 1.5px solid var(--base-content);
 }
 	
@@ -189,7 +188,7 @@ a:hover {
     filter: brightness(80%);
 }
 
- td, th {
+td, th {
   border: 3px ridge var(--bg2);
   text-align: left;
   padding: 8px;
@@ -256,6 +255,10 @@ blockquote {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .text-xl {
@@ -420,7 +423,6 @@ blockquote {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  max-width: 1200px;
 }
 
 .header {
@@ -499,7 +501,23 @@ blockquote {
   display: flex;
   position: relative;
   justify-content: center;
-  width: 100%;
+  max-width: 500px;
+}
+
+.larger-logo {
+  display: flex;
+  justify-content: center;
+  width: 240px;
+  height: 240px;
+  background: whitesmoke;
+}
+
+.framework-logo {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: whitesmoke;
 }
 
 .logo-pic {
@@ -582,6 +600,11 @@ blockquote {
   list-style: none;
 }
 
+.ordered-list {
+  color: var(--accent-content);
+  font-size: 1.2rem;
+}
+
 .exiting-pic {
   width: 350px;
 }
@@ -591,7 +614,7 @@ blockquote {
   cursor: pointer;
 }
 
-.gruv-secondary-content {
+.secondary-content {
   color: var(--secondary-content);
 }
 
@@ -620,5 +643,12 @@ blockquote {
   .vault-video {
     width: 300px;
     height: 166px;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 601px) {
+  main {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }

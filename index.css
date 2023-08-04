@@ -319,7 +319,7 @@ blockquote {
 }
 
 .fade-container {
-  height: 336px;
+  height: 270px;
   width: 100%;
   position: relative;
 }
@@ -388,7 +388,7 @@ blockquote {
 .alug-landing-pic {
   display: flex;
   justify-content: center;
-  height: 350px;
+  height: 280px;
 }
 
 .pic-border {

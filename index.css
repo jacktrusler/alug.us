@@ -318,9 +318,77 @@ blockquote {
   font-size: 2.5rem;
 }
 
+.fade-container {
+  height: 336px;
+  width: 100%;
+  position: relative;
+}
+
+.fade-container div {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+#stallman {
+  animation-name: reverse-fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+}
+
+#linus {
+  animation-name: fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+}
+
+@keyframes reverse-fade {
+  0% {
+    opacity: 0;
+  }
+  47% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  94% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  44% {
+    opacity: 1;
+  }
+  47% {
+    opacity: 0;
+  }
+  97% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .alug-landing-pic {
   display: flex;
   justify-content: center;
+  height: 350px;
 }
 
 .pic-border {

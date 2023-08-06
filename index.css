@@ -293,6 +293,13 @@ blockquote {
   padding-right: 8px;
 }
 
+.vault-month-container div {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+}
+
 .alug-title-c {
   width: 100%;
   padding: 16px;

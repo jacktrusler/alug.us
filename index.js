@@ -74,11 +74,11 @@ if (logo) {
 // JQuery
 // ----------------------------
 
-$('#2021-container').hide();
-
-$('#2021-year').click(function() {
-  $('#2021-container').toggle(500);
-})
+const years = [
+  '2021',
+  '2022',
+  '2023',
+]
 
 const months = [
   'january',
@@ -95,9 +95,18 @@ const months = [
   'december',
 ]
 
-for (const month of months) {
-  $(`#${month}-2021-container`).hide();
-  $(`#${month}-2021-title`).click(function() {
-    $(`#${month}-2021-container`).toggle(300);
+for (const year of years) {
+  $(`#${year}-container`).hide();
+  $(`#${year}-year`).click(function() {
+    $(`#${year}-container`).toggle(500);
   })
+
+  for (const month of months) {
+    $(`#${month}-${year}-container`).hide();
+    $(`#${month}-${year}`).click(function() {
+      $(`#${month}-${year}-container`).toggle(300);
+    })
+  }
+
 }
+

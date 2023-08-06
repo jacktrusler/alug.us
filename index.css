@@ -220,6 +220,10 @@ blockquote {
   color: var(--accent-content);
 }
 
+.text-md {
+  font-size: 1rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
@@ -259,6 +263,10 @@ blockquote {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .text-xl {
@@ -405,6 +413,18 @@ blockquote {
   color: var(--primary-content);
 }
 
+.vault-year {
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-style: oblique;
+  color: var(--primary);
+}
+
+.vault-year-container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 .vault-month-container {
   padding-left: 16px;
   font-size: 1.4rem;
@@ -412,16 +432,6 @@ blockquote {
   color: var(--primary-content);
 }
 
-.vault-link {
-  cursor: pointer;
-}
-
-.vault-year {
-  cursor: pointer;
-  font-size: 1.6rem;
-  font-style: oblique;
-  color: var(--primary);
-}
 
 .s-para {
   color:var(--base-content);
@@ -456,6 +466,11 @@ blockquote {
   padding-left: 4px;
   padding-right: 4px;
   color: var(--secondary);
+}
+
+.video-subtitle {
+  color: var(--secondary);
+  font-size: 1rem;
 }
 
 .code {

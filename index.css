@@ -273,6 +273,14 @@ blockquote {
   font-size: 1.3rem;
 }
 
+.text-3xl {
+  font-size: 2rem;
+}
+
+.w-512px {
+  max-width: 512px;
+}
+
 .footer {
   text-align: center;
   width: 100%;

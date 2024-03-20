@@ -22,9 +22,9 @@ function downloadVimrc() {
   downloadByUrl("https://raw.githubusercontent.com/jacktrusler/dotfiles/main/.vimrc", "vimrc_example");
 }
 
-// ----------------------------
-// Toggling Dark and Light mode
-// ----------------------------
+/* ----------------------------
+ Toggling Dark and Light mode
+ ---------------------------- */
 const toggle = document.getElementById("theme-toggle");
 const sun = document.getElementById("sun");
 const moon = document.getElementById("moon");

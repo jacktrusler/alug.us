@@ -1,162 +1,201 @@
 html {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif; }
-*, *:before, *:after {
+  font-family: 'Roboto', sans-serif;
+}
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-html, body {
-	min-height: 100%;
-}
+
+html,
 body {
-	font-size: 1rem;
-	text-rendering: optimizeLegibility;
+  min-height: 100%;
 }
+
+body {
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+}
+
 /* sets the base font size for the document; turns on kerning pairs and ligatures */
-body, ul, ol, dl {
-	margin: 0;
-}
-article, aside, audio, 
-footer, header, nav, section, video {
-	display: block; 
-}
-	/* ensures that older browsers will display HTML5 elements correctly */
-	
-h1, h2, h3, h4, h5, h6 {
+body,
+ul,
+ol,
+dl {
   margin: 0;
 }
 
-p { 
-	-ms-word-break: break-all;
-	word-break: break-all;
-	word-break: break-word;
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
+article,
+aside,
+audio,
+footer,
+header,
+nav,
+section,
+video {
+  display: block;
+}
+
+/* ensures that older browsers will display HTML5 elements correctly */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
-} 
-	/* sets hyphenation by default on paragraphs */
-	
-textarea { 
-	resize: vertical;
 }
- /* changes textarea resizing from "both" (UA default) to vertical only */
- 
-table { border-collapse: collapse; }
+
+/* sets hyphenation by default on paragraphs */
+
+textarea {
+  resize: vertical;
+}
+
+/* changes textarea resizing from "both" (UA default) to vertical only */
+
+table {
+  border-collapse: collapse;
+}
+
 td {
-	padding: .5rem;
+  padding: .5rem;
 }
-	/* causes tables to actually look like tables */
-	
-img { 
+
+/* causes tables to actually look like tables */
+
+img {
   display: block;
-	border: none;
-	max-width: 100%;
+  border: none;
+  max-width: 100%;
 }
-	/* removes outlines from linked images (for older browsers and IE), sets up images for responsive design layout */
-	
-input[type="submit"]::-moz-focus-inner, 
-	input[type="button"]::-moz-focus-inner {
-		border : 0px;
-	}
-	/* removes the inner border effect from focused buttons for form elements in Firefox */
-	
-input[type="search"] { 
-	-webkit-appearance: textfield;
+
+/* removes outlines from linked images (for older browsers and IE), sets up images for responsive design layout */
+
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+  border: 0px;
+}
+
+/* removes the inner border effect from focused buttons for form elements in Firefox */
+
+input[type="search"] {
+  -webkit-appearance: textfield;
   appearance: textfield;
-} 
-input[type="submit"] { 
-	-webkit-appearance:none;
+}
+
+input[type="submit"] {
+  -webkit-appearance: none;
   appearance: none;
 }
-	/* removes the OS X appearance from HTML5 search inputs and submit buttons when viewed in Safari */
-	
+
+/* removes the OS X appearance from HTML5 search inputs and submit buttons when viewed in Safari */
+
 input:required:after {
-	color: #f00;
-	content: " *";
+  color: #f00;
+  content: " *";
 }
-	/* sets up required form fields with the conventional following red asterix */
-input[type="email"]:invalid { 
-	background: #f00;
+
+/* sets up required form fields with the conventional following red asterix */
+input[type="email"]:invalid {
+  background: #f00;
 }
-	/* causes a visual alert in browsers that do client-side checking of HTML5 email field – this may already be the default in some browsers. */
-	
-.right { 
-	float: right;
-	margin-left: 2rem;
-	clear: right;
+
+/* causes a visual alert in browsers that do client-side checking of HTML5 email field – this may already be the default in some browsers. */
+
+.right {
+  float: right;
+  margin-left: 2rem;
+  clear: right;
 }
-.left { 
-	float: left;
-	margin-right: 2rem;
-	clear: left;
+
+.left {
+  float: left;
+  margin-right: 2rem;
+  clear: left;
 }
-	/* allows a quick shortcut for floating elements left and right while avoiding the “float quirk” problem */
-sub, sup { 
-	line-height: 0;
+
+/* allows a quick shortcut for floating elements left and right while avoiding the “float quirk” problem */
+sub,
+sup {
+  line-height: 0;
 }
 
 /* Gruvbox light */
 html[data-theme='light'] {
-    --bg: #f9f5d7;
-    --bg1: #ebdbb2;
-    --bg2: #d5c4a1;
-    --base-content: #3c3836;
-    --primary: #af3a03;
-    --primary-content: #427b58;
-    --secondary: #B57614;
-    --secondary-content: #79740e;
-    --accent: #8f3f71;
-    --accent-content: #076678;
-    --neutral-content: #7c6f64;
+  --bg: #f9f5d7;
+  --bg1: #ebdbb2;
+  --bg2: #d5c4a1;
+  --base-content: #3c3836;
+  --primary: #af3a03;
+  --primary-content: #427b58;
+  --secondary: #B57614;
+  --secondary-content: #79740e;
+  --accent: #8f3f71;
+  --accent-content: #076678;
+  --neutral-content: #7c6f64;
 }
 
 /* Gruvbox dark */
 html[data-theme='dark'] {
-    --bg: #282828;
-    --bg1: #3c3836;
-    --bg2: #504945;
-    --base-content: #fbf1c7;
-    --primary: #fe8019;
-    --primary-content: #8ec07c;
-    --secondary: #fabd2f;
-    --secondary-content: #b8bb26;
-    --accent: #d3869b;
-    --accent-content: #83a598;
-    --neutral-content: #a89984;
+  --bg: #282828;
+  --bg1: #3c3836;
+  --bg2: #504945;
+  --base-content: #fbf1c7;
+  --primary: #fe8019;
+  --primary-content: #8ec07c;
+  --secondary: #fabd2f;
+  --secondary-content: #b8bb26;
+  --accent: #d3869b;
+  --accent-content: #83a598;
+  --neutral-content: #a89984;
 }
 
 /* Theme from Daisy UI */
 html[data-theme='cupcake'] {
-    --bg: #F9F7F5;
-    --bg1: #EFEAE5;
-    --bg2: #E7E2DE;
-    --base-content: #291334;
-    --primary: #65C3C7;
-    --primary-content: #034448; 
-    --secondary: #EE9FBC;
-    --secondary-content: #4F001D;
-    --accent: #EDAF3A;
-    --accent-content: #3B2600;
-    --neutral: #291334;
-    --neutral-content: #DFAFF7;
+  --bg: #F9F7F5;
+  --bg1: #EFEAE5;
+  --bg2: #E7E2DE;
+  --base-content: #291334;
+  --primary: #65C3C7;
+  --primary-content: #034448;
+  --secondary: #EE9FBC;
+  --secondary-content: #4F001D;
+  --accent: #EDAF3A;
+  --accent-content: #3B2600;
+  --neutral: #291334;
+  --neutral-content: #DFAFF7;
 }
 
 /* Theme from Daisy UI */
 html[data-theme='business'] {
-    --bg: #202020;
-    --bg1: #23282D;
-    --bg2: #1A1A1A;
-    --base-content: #D2D2D2;
-    --primary: #409AF5;
-    --primary-content: #B8DCFF; 
-    --secondary: #002537;
-    --secondary-content: #7C8Fda;
-    --accent: #EA6947;
-    --accent-content: #3D0D00;
-    --neutral: #23282D;
-    --neutral-content: #C8D3E0;
+  --bg: #202020;
+  --bg1: #23282D;
+  --bg2: #1A1A1A;
+  --base-content: #D2D2D2;
+  --primary: #409AF5;
+  --primary-content: #B8DCFF;
+  --secondary: #002537;
+  --secondary-content: #7C8Fda;
+  --accent: #EA6947;
+  --accent-content: #3D0D00;
+  --neutral: #23282D;
+  --neutral-content: #C8D3E0;
 }
 
 html {
@@ -164,8 +203,8 @@ html {
 }
 
 body {
-    background: var(--bg);
-    color: var(--base-content);
+  background: var(--bg);
+  color: var(--base-content);
 }
 
 main {
@@ -178,17 +217,18 @@ hr {
   width: 100%;
   border: 1.5px solid var(--base-content);
 }
-	
+
 a {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 a:hover {
-    text-decoration: underline;
-    filter: brightness(80%);
+  text-decoration: underline;
+  filter: brightness(80%);
 }
 
-td, th {
+td,
+th {
   border: 3px ridge var(--bg2);
   text-align: left;
   padding: 8px;
@@ -331,13 +371,14 @@ blockquote {
   flex-wrap: wrap;
 }
 
-.a-sub-c > div {
+.a-sub-c>div {
   display: flex;
   height: 48px;
   align-items: flex-end;
   margin-top: 8px;
 }
-.a-sub-c > div > h1{
+
+.a-sub-c>div>h1 {
   font-size: 2.5rem;
 }
 
@@ -373,18 +414,23 @@ blockquote {
   0% {
     opacity: 0;
   }
+
   47% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   94% {
     opacity: 1;
   }
+
   97% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
@@ -394,15 +440,19 @@ blockquote {
   0% {
     opacity: 1;
   }
+
   44% {
     opacity: 1;
   }
+
   47% {
     opacity: 0;
   }
+
   97% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -449,7 +499,7 @@ blockquote {
 
 
 .s-para {
-  color:var(--base-content);
+  color: var(--base-content);
   font-size: 1.2rem;
 }
 
@@ -489,7 +539,7 @@ blockquote {
 }
 
 .code {
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   white-space: pre;
   word-wrap: normal;
   display: block;
@@ -540,7 +590,7 @@ blockquote {
   font-weight: 900;
 }
 
-.subtitle{
+.subtitle {
   color: var(--primary-content);
   font-size: 1.5rem;
   font-weight: 500;
@@ -560,12 +610,15 @@ blockquote {
   padding-top: 4px;
   border-radius: 50%;
 }
+
 .sun {
   color: var(--bg);
 }
+
 .moon {
   color: var(--bg);
 }
+
 .hidden {
   display: none;
 }
@@ -679,7 +732,7 @@ blockquote {
 .dirs {
   font-size: 1.7rem;
   color: var(--secondary);
-  display: flex; 
+  display: flex;
   flex-direction: column;
   width: 100px;
   align-items: center;

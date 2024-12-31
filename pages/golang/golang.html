@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>Golang!</title>
+
+  <script type="module">
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+
+  <link rel="stylesheet" href="/index.css">
+
+  <!-- general meta -->
+  <meta name="keywords"
+    content="ed ex em vi stevie neovim open source git presentation alug ALUG vcs Linus Torvalds linux community go golang gopher">
+  <meta name="description" content="Git, the version control system for the people">
+  <meta name="theme-color" content="#282828">
+  <!-- OpenGraph meta -->
+  <meta property="og:title" content="Golang">
+  <meta property="og:description" content="Go, the programming language with a cute gopher">
+  <meta property="og:image" content="/images/golang/go-favicon.png">
+  <meta property="og:image:alt" content="golang">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/images/golang/go-favicon.png">
+  <link rel="canonical" href="https://alug.us/pages/golang/golang.html">
+
+  <link rel="icon" href="/images/golang/go-favicon.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/images/golang/go-favicon.png">
+</head>
+
+<body>
+  <!-- Content -->
+  <main>
+    <div class="page-container">
+      <div class="header">
+        <hr>
+        <div class="title-box">
+          <h1 class="title go-text">GO Language</h1>
+          <button id="theme-toggle" class="" type="button">
+            <svg id="sun" class="sun" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-sun">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg id="moon" class="moon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-moon">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+        <span class="subtitle">"Clear is better than clever"</span>
+        <span class="sub-sub">-- <a href="https://go-proverbs.github.io/">Go-Proverbs</a></span>
+        <hr>
+      </div>
+
+      <div class="title-pic-container">
+        <div class="pic-512max pic-border">
+          <img src="/images/golang/bad-boys.png" />
+        </div>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">What is Go lang?</h2>
+        <h3 class="section-subtitle">I think of it as the C language on steroids</h3>
+        <hr>
+        <p class="section-desc">
+          Developed by Ken Thompson, Rob Pike and Robert Griesemer at google in first appeared in 2009. The designers
+          wanted to address criticisms of other languages at google, while keeping useful characteristics.
+
+        <ul>
+          <li>Static Typing & Run time efficiency</li>
+          <li>Readability and Useability</li>
+          <li>High-performance networking and multiprocessing</li>
+        </ul>
+
+
+        <p class="section-desc">
+          Funny note: Its designers were primarily motivated by their shared dislike of C++.<br> <br>
+
+          Version 1.0 was released on March 2012.
+        </p>
+        <br>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">What's awesome about go?</h2>
+        <h3 class="section-subtitle">Propaganda incoming, brace for impact.</h3>
+        <hr>
+        <div class="flex-center flex-wrap">
+          <div class="another-pic-container">
+            <img class="centered-pic pic-border" src="/images/golang/cool-gophers.png" />
+          </div>
+        </div>
+        <p class="section-desc">
+          I've only been using golang for a few months, but I really have taken a liking to it.
+        </p>
+        <ol>
+          <li>Stuff builds and compiles fast!</li>
+          <li>It has a garbage collector</li>
+          <li>Project structure is simple</li>
+          <li>The Go Path is really cool</li>
+          <li>It's not Javascript</li>
+          <li>The Standard library is great</li>
+          <li>Easy to learn syntax</li>
+        </ol>
+        <br>
+      </div>
+
+      <div class="section">
+        <hr>
+        <h2 class="section-title">How to get started.</h2>
+        <h3 class="section-subtitle">Let's Go</h3>
+        <hr>
+
+        <a href="https://go.dev/doc/install">Install Link Here</a>
+        <p>
+          Add go binaries to your PATH, I put it into my .zsrhc so it's sourced on startup.
+          <span class="code">export PATH="$HOME/go/bin:$PATH"</span>
+        </p>
+
+        <span>Start your first project with this little tutorial: <a
+            href="https://go.dev/doc/tutorial/getting-started">Here!</a></span>
+        <br>
+
+        <p>
+          And that's it, you're ready to <span class="go-text">GO!</span> Go really feels great for making small CLI
+          apps, web applications and servers. I have the strong sense that it's going to just keep getting more and
+          more popular due to the great decisions the designers made and how easy it is to get started with and learn,
+          especially if you have some familiarity with one of the C families of languages.
+        </p>
+        <br>
+      </div>
+
+  </main>
+  <div class="footer">
+    ALUG 2023
+  </div>
+  <!-- Javascript -->
+  <script src="/index.js"></script>
+</body>
+
+</html>

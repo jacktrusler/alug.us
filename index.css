@@ -574,6 +574,7 @@ blockquote {
 }
 
 .header {
+  width: 100%;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
@@ -635,6 +636,10 @@ blockquote {
 .title-pic {
   height: auto;
   max-width: 1000px;
+}
+
+.golang-pic {
+  max-width: 500px;
 }
 
 .pic-512max {
@@ -783,6 +788,10 @@ blockquote {
 .vault-video {
   width: 560px;
   height: 315px;
+}
+
+.go-text {
+  color: #00ADD8;
 }
 
 @media (max-width: 600px) {

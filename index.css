@@ -304,11 +304,10 @@ blockquote {
 .btn {
   width: 200px;
   height: 40px;
-  border: 2px solid var(--accent-content);
-  color: var(--accent-content);
   cursor: pointer;
   font-size: 20px;
-  background-color: var(--neutral);
+  color: var(--base-content);
+  background-color: var(--bg1);
 }
 
 .flex-col {
@@ -351,6 +350,8 @@ blockquote {
   max-width: 500px;
   height: 400px;
   padding-bottom: 12px;
+  background-color: var(--bg);
+  color: var(--base-content);
 }
 
 .dialog-img {

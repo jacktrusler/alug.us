@@ -289,6 +289,28 @@ blockquote {
   display: flex;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.btn {
+  width: 200px;
+  height: 40px;
+  border: 2px solid var(--accent-content);
+  color: var(--accent-content);
+  cursor: pointer;
+  font-size: 20px;
+  background-color: var(--neutral);
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -299,6 +321,10 @@ blockquote {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.gap-3 {
+  gap: 12px;
 }
 
 .flex-wrap {
@@ -319,6 +345,26 @@ blockquote {
 
 .w-512px {
   max-width: 512px;
+}
+
+.dialog {
+  max-width: 500px;
+  height: 400px;
+  padding-bottom: 12px;
+}
+
+.dialog-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid var(--accent-content);
+  box-sizing: border-box;
+}
+
+.dialog-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .footer {
@@ -628,6 +674,10 @@ blockquote {
   border: 5px ridge var(--bg1);
 }
 
+.pic-border-accent {
+  border: 5px ridge var(--accent-content);
+}
+
 .title-pic-container {
   display: flex;
   justify-content: center;
@@ -658,6 +708,11 @@ blockquote {
   position: relative;
   justify-content: center;
   max-width: 500px;
+}
+
+#close {
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .larger-logo {
